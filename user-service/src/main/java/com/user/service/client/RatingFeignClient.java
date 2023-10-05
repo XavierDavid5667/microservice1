@@ -1,0 +1,31 @@
+package com.user.service.client;
+
+
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.user.service.entity.Rating;
+
+@FeignClient(name = "RATING-SERVICE")
+public interface RatingFeignClient {
+	
+	
+	
+	//POST
+	@PostMapping("/ratings/createRating")
+    Rating createRating(Rating rating);
+	
+	//PUT
+	@PutMapping("/ratings/updateRating/{ratingId}")
+    public Rating updateRating(@PathVariable String ratingId, Rating rating);
+	
+	
+	@DeleteMapping("/ratings/deleteRating/{ratingId}")
+	public void deleteRating(@PathVariable String ratingId);
+	
+}

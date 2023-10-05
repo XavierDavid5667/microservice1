@@ -1,0 +1,4 @@
+1695401728295	Extract local variable 'create'
+1695401871182	Extract local variable 'allRatings'
+1695402644078	Extract local variable 'ratingsByUserId'
+1695403335088	Extract local variable 'ratingByHotelId'

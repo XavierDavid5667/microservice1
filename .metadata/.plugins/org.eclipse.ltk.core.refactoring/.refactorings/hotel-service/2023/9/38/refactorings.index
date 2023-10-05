@@ -1,0 +1,4 @@
+1695395139794	Rename package 'com.hotel.service.entities.Hotel'
+1695396132628	Extract local variable 'createHotel'
+1695396484526	Extract local variable 'hotel'
+1695396571205	Extract local variable 'all'
